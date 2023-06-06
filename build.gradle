@@ -25,8 +25,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-  mainModule = 'com.github.viqbgrg.javatvbox'
-  mainClass = 'com.github.viqbgrg.javatvbox.TvboxApplication'
+  mainModule = 'com.github.viqbgrg.tvbox'
+  mainClass = 'com.github.viqbgrg.tvbox.TvboxApplication'
 }
 
 javafx {

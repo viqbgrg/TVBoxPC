@@ -1,4 +1,4 @@
-module com.github.viqbgrg.javatvbox {
+module com.github.viqbgrg.tvbox {
     requires javafx.controls;
     requires javafx.fxml;
             
