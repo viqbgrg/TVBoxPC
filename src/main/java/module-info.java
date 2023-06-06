@@ -4,6 +4,6 @@ module com.github.viqbgrg.javatvbox {
             
         requires org.controlsfx.controls;
                             
-    opens com.github.viqbgrg.javatvbox to javafx.fxml;
-    exports com.github.viqbgrg.javatvbox;
+    opens com.github.viqbgrg.tvbox to javafx.fxml;
+    exports com.github.viqbgrg.tvbox;
 }

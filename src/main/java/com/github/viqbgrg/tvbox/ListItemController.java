@@ -1,4 +1,4 @@
-package com.github.viqbgrg.javatvbox;
+package com.github.viqbgrg.tvbox;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

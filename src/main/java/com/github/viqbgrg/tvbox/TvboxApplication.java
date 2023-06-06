@@ -1,4 +1,4 @@
-package com.github.viqbgrg.javatvbox;
+package com.github.viqbgrg.tvbox;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
