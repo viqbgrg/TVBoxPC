@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
 <Pane prefHeight="2.0" prefWidth="2.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.viqbgrg.tvbox.ListItemController">
-    <Label fx:id="label" layoutX="35.0" layoutY="6.0" prefHeight="50.0" prefWidth="117.0" text="ListItem1" />
-    <Button fx:id="button" onAction="#ButtonClick" text="Button" />
-
+    <HBox>
+        <children>
+        </children>
+    </HBox>
 </Pane>
