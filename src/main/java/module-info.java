@@ -10,6 +10,9 @@ module com.github.viqbgrg.tvbox {
 
     requires spring.boot.autoconfigure;
     requires spring.boot;
+    requires spring.context;
+    requires spring.beans;
+    requires spring.core;
     opens com.github.viqbgrg.tvbox to javafx.fxml,spring.core;
     exports com.github.viqbgrg.tvbox;
 }
