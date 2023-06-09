@@ -8,11 +8,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+@Component
 public class MainController implements Initializable {
     @FXML
     private TilePane tilePane;

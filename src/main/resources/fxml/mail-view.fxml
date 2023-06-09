@@ -21,7 +21,8 @@
                     <Label fx:id="label" text="这是第一张图片" />
                     <ImageView fx:id="image">
                         <image>
-                            <Image url=""/>
+                            <Image url="https://img9.doubanio.com/view/photo/l/public/p2892024245.jpeg"/>
+<!--                            <Image url="https://img.alicdn.com/imgextra/i1/O1CN01rGJZac1Zn37NL70IT_!!6000000003238-2-tps-230-180.png"/>-->
                         </image>
                     </ImageView>
                 </StackPane>

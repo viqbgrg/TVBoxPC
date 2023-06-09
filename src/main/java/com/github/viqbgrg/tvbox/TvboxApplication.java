@@ -4,20 +4,14 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 
-public class TvboxApplication extends Application {
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(TvboxApplication.class.getResource("mail-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 500);
-        stage.setTitle("tv");
-        stage.setScene(scene);
-        stage.show();
-    }
+@SpringBootApplication
+public class TvboxApplication {
 
     public static void main(String[] args) {
-        launch();
+        Application.launch(JavaFxApplication.class, args);
     }
 }
