@@ -1,5 +1,6 @@
 package com.github.viqbgrg.tvbox;
 
+import atlantafx.base.theme.PrimerLight;
 import javafx.application.Application;
 import javafx.application.HostServices;
 import javafx.application.Platform;
@@ -37,6 +38,7 @@ public class JavaFxApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
         this.context.publishEvent(new StageReadyEvent(stage));
     }
 

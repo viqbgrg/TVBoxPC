@@ -10,20 +10,20 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <TabPane tabClosingPolicy="UNAVAILABLE">
-        <Tab text="按钮">
-            <ScrollPane prefHeight="439.0" hbarPolicy="NEVER" prefViewportWidth="200" prefWidth="760.0">
-                <FlowPane>
-                    <StackPane>
-                        <ImageView fx:id="image" fitHeight="200" fitWidth="200">
-                            <Image url="https://img9.doubanio.com/view/photo/l/public/p2892024245.jpeg"/>
-                            <!--                            <Image url="https://img.alicdn.com/imgextra/i1/O1CN01rGJZac1Zn37NL70IT_!!6000000003238-2-tps-230-180.png"/>-->
-                        </ImageView>
-                        <Label fx:id="label" text="这是第一张图片"/>
-                    </StackPane>
-                </FlowPane>
-            </ScrollPane>
-        </Tab>
+    <TabPane tabClosingPolicy="UNAVAILABLE" fx:id="tabPane">
+<!--        <Tab text="按钮">-->
+<!--            <ScrollPane prefHeight="439.0" hbarPolicy="NEVER" prefViewportWidth="200" prefWidth="760.0">-->
+<!--                <FlowPane>-->
+<!--                    <StackPane>-->
+<!--                        <ImageView fx:id="image" fitHeight="200" fitWidth="200">-->
+<!--                            <Image url="https://img9.doubanio.com/view/photo/l/public/p2892024245.jpeg"/>-->
+<!--                            &lt;!&ndash;                            <Image url="https://img.alicdn.com/imgextra/i1/O1CN01rGJZac1Zn37NL70IT_!!6000000003238-2-tps-230-180.png"/>&ndash;&gt;-->
+<!--                        </ImageView>-->
+<!--                        <Label fx:id="label" text="这是第一张图片"/>-->
+<!--                    </StackPane>-->
+<!--                </FlowPane>-->
+<!--            </ScrollPane>-->
+<!--        </Tab>-->
     </TabPane>
 
 </VBox>
