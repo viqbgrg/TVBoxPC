@@ -23,6 +23,7 @@ public class CoverPane extends ScrollPane {
         setPrefWidth(200);
         setPrefWidth(760);
         createView();
+        this.vvalueProperty().addListener((observable, oldValue, newValue) -> System.out.println(newValue));
     }
 
     private void createView() {
