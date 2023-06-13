@@ -1,6 +1,7 @@
 package com.github.viqbgrg.tvbox;
 
 import com.github.viqbgrg.tvbox.layout.CoverPane;
+import com.github.viqbgrg.tvbox.layout.VideoTab;
 import com.github.viqbgrg.tvbox.model.Class;
 import com.github.viqbgrg.tvbox.model.Result;
 import com.github.viqbgrg.tvbox.model.Vod;
@@ -37,9 +38,9 @@ public class MainController implements Initializable {
             Class item = types.get(index);
             Tab tab;
             if (index == 0) {
-                tab = new Tab(item.getTypeName(), new CoverPane(result.getList()));
+                tab = new VideoTab(item.getTypeName(), new CoverPane(result.getList()));
             }else{
-                tab = new Tab(item.getTypeName());
+                tab = new VideoTab(item.getTypeName());
             }
             return tab;
         }).toList();

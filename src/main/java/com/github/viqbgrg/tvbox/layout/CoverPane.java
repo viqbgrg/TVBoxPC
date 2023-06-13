@@ -4,6 +4,7 @@ import com.github.viqbgrg.tvbox.model.Result;
 import com.github.viqbgrg.tvbox.model.Vod;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;

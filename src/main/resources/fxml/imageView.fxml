@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.viqbgrg.tvbox.controller.ImageViewController">
+    <ImageView fitHeight="400.0" fitWidth="300.0" StackPane.alignment="CENTER">
+        <Image url="https://img9.doubanio.com/view/photo/l/public/p2892024245.jpeg" backgroundLoading="true" fx:id="image" />
+      <StackPane.margin>
+         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+      </StackPane.margin>
+    </ImageView>
+    <Label style="-fx-background-color: blue; -fx-background-radius: 3;" fx:id="describe" text="高清" StackPane.alignment="CENTER_LEFT">
+      <StackPane.margin>
+         <Insets top="200.0"/>
+      </StackPane.margin>
+      <font>
+         <Font size="25.0" />
+      </font></Label>
+    <Label text="变形金刚" fx:id="name" StackPane.alignment="BOTTOM_CENTER">
+      <StackPane.margin>
+         <Insets />
+      </StackPane.margin>
+      <font>
+         <Font size="30.0" />
+      </font>
+    </Label>
+</StackPane>
