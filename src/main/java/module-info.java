@@ -18,5 +18,6 @@ module com.github.viqbgrg.tvbox {
     opens com.github.viqbgrg.tvbox.config to spring.core,spring.beans,spring.context;
     opens com.github.viqbgrg.tvbox.service to spring.core,spring.beans,spring.context;
     opens com.github.viqbgrg.tvbox.model to com.google.gson;
+    opens com.github.viqbgrg.tvbox.controller to javafx.fxml;
     exports com.github.viqbgrg.tvbox;
 }
