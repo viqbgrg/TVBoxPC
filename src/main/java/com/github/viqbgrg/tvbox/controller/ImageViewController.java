@@ -33,7 +33,9 @@ public class ImageViewController  implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.image.setImage(new Image(url, true));
+        if (url != null) {
+            this.image.setImage(new Image(url, true));
+        }
         this.describe.setText(describeText);
         this.name.setText(nameText);
     }
