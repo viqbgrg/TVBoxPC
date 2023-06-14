@@ -33,4 +33,20 @@ public class SiteVodService {
             throw new RuntimeException(e);
         }
     }
+
+    public Result categoryContent(String tid, String page) {
+        Site site = siteService.getSite();
+        Map<String, String> params = new HashMap<>();
+        //params.put("ext", Utils.getBase64(App.gson().toJson(extend)));
+        params.put("ac", "detail");
+        params.put("t", tid);
+        params.put("pg", page);
+        String body = null;
+        try {
+            body = httpService.newCall(site.getApi(), params).execute().body().string();
+            return gson.fromJson(body, Result.class);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

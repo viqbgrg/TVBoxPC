@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-radius: 10px 10px 10px 10px; -fx-border-radius: 10px 10px 10px 10px;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane onMouseClicked="#play" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-radius: 10px 10px 10px 10px; -fx-border-radius: 10px 10px 10px 10px;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
     <ImageView fx:id="image" fitHeight="400.0" fitWidth="300.0" focusTraversable="true" StackPane.alignment="CENTER">
         <Image  backgroundLoading="true" url="https://img9.doubanio.com/view/photo/l/public/p2892024245.jpeg" />
       <StackPane.margin>

@@ -1,7 +1,6 @@
 package com.github.viqbgrg.tvbox;
 
 import com.github.viqbgrg.tvbox.controller.ImageViewController;
-import com.github.viqbgrg.tvbox.layout.VideoTab;
 import com.github.viqbgrg.tvbox.model.Class;
 import com.github.viqbgrg.tvbox.model.Result;
 import com.github.viqbgrg.tvbox.service.SiteVodService;
@@ -47,7 +46,7 @@ public class MainController implements Initializable {
                     ClassPathResource fxml = new ClassPathResource("/fxml/imageView.fxml");
                     try {
                         FXMLLoader fxmlLoader = new FXMLLoader(fxml.getURL());
-                        ImageViewController imageViewController = new ImageViewController(item1.getVodPic(), item1.getVodName(), item1.getVodRemarks());
+                        ImageViewController imageViewController = new ImageViewController(item1.getVodPic(), item1.getVodName(), item1.getVodRemarks(), item1.getVodId());
                         fxmlLoader.setController(imageViewController);
                         Parent root = fxmlLoader.load();
                         return root;
@@ -59,14 +58,37 @@ public class MainController implements Initializable {
                 scrollPane.setContent(flowPane);
                 scrollPane.setFitToHeight(true);
                 scrollPane.setFitToWidth(true);
-                tab = new VideoTab(item.getTypeName(), scrollPane);
+                tab = new Tab(item.getTypeName(), scrollPane);
             } else {
-                tab = new VideoTab(item.getTypeName());
+                tab = new Tab(item.getTypeName());
             }
+            tab.setId(item.getTypeId());
             return tab;
         }).toList();
         tabPane.getTabs().addAll(list);
         tabPane.getSelectionModel().selectedItemProperty().addListener((observable, oldTab, newTab) -> {
+            if (newTab.getContent() == null) {
+                Result result1 = vodService.categoryContent(newTab.getId(), "10");
+                ScrollPane scrollPane = new ScrollPane();
+                FlowPane flowPane = new FlowPane();
+                List<Parent> list1 = result1.getList().stream().parallel().map(item1 -> {
+                    ClassPathResource fxml = new ClassPathResource("/fxml/imageView.fxml");
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(fxml.getURL());
+                        ImageViewController imageViewController = new ImageViewController(item1.getVodPic(), item1.getVodRemarks(), item1.getVodName(), item1.getVodId());
+                        fxmlLoader.setController(imageViewController);
+                        Parent root = fxmlLoader.load();
+                        return root;
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }).toList();
+                flowPane.getChildren().addAll(list1);
+                scrollPane.setContent(flowPane);
+                scrollPane.setFitToHeight(true);
+                scrollPane.setFitToWidth(true);
+                newTab.setContent(scrollPane);
+            }
             System.out.print(newTab.getText());
         });
     }

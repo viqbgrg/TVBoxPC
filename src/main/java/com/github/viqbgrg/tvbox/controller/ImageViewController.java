@@ -21,11 +21,14 @@ public class ImageViewController  implements Initializable {
     private final String describeText;
     private final String nameText;
 
+    private final String vodId;
 
-    public ImageViewController(String url, String describeText, String nameText) {
+
+    public ImageViewController(String url, String describeText, String nameText, String vodId) {
         this.url = url;
         this.describeText = describeText;
         this.nameText = nameText;
+        this.vodId = vodId;
     }
 
     @Override
@@ -34,4 +37,14 @@ public class ImageViewController  implements Initializable {
         this.describe.setText(describeText);
         this.name.setText(nameText);
     }
+
+    void initData(String name) {
+    }
+
+    @FXML
+    public void play(){
+        System.out.println(this.vodId);
+    }
+
+
 }
